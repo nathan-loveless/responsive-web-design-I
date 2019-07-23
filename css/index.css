@@ -71,7 +71,7 @@ body, nav .header-division, .section-division, .middle-img, .services-header-ima
 	width: 876px; /* this is the width of the full middle image */
 }
 
-nav, header, footer, .header-text, .main-content, .secondary-content
+nav, header, footer, .header-text, .main-content, .secondary-content, .nav-elements
 {
 	display: flex;
 }
@@ -85,7 +85,7 @@ nav, header, footer, .header-text, .main-content, .secondary-content
 body
 {
 	height: auto;
-	margin-left: 75px;
+	margin: 0 auto;
 }
 
 nav
@@ -95,11 +95,13 @@ nav
 	align-items: center;
 }
 
-/*.nav-elements
+.nav-elements
 {
-	margin-top: 10px;
-	height: 50px;
-}*/
+	width: 876px;
+	justify-content: space-around;
+	/*margin-top: 10px;
+	height: 50px;*/
+}
 
 nav a
 {
@@ -216,7 +218,8 @@ header h1
 .middle-img
 {
 	/* Must set a width/height or the div will be 0px and won't show up. */
-	height: 182px;
+	width: 876px;
+	height: 183px;
 	background-image: url("../img/mid-page-accent.jpg");
 }
 
@@ -235,21 +238,19 @@ footer
 }
 
 
-@media (max-width : 800px)
+@media (max-width: 800px)
 {
-	nav 
-	{ 
-		width: 75%;
-		flex-direction: row-reverse;
-		flex-flow: wrap;
-	}
-	
-	nav a { flex-direction: row; }	
+	body, .nav-elements, .middle-img { width: 700px; }
+	body { margin: 0px 50px 0px 50px; }	
+	nav { flex-direction: column-reverse; }	
+	.nav-elements { margin-top: 25px;}
 	.header-image { display: none; }
 	
 	.header-text 
 	{ 
 		width: 100%; 
-		justify-content: center; 
-	}
+		margin: 0px;
+	}	
+	
+	.middle-img { background-size: contain; }
 }
