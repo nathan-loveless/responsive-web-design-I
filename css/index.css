@@ -243,7 +243,7 @@ footer
 	body, .nav-elements, .middle-img { width: 700px; }
 	body { margin: 0px 50px 0px 50px; }	
 	nav { flex-direction: column-reverse; }	
-	.nav-elements { margin-top: 25px;}
+	.nav-elements { margin-top: 25px; }
 	.header-image { display: none; }
 	
 	.header-text 
@@ -253,4 +253,22 @@ footer
 	}	
 	
 	.middle-img { background-size: contain; }
+}
+
+@media (max-width: 500px)
+{
+	body, .nav-elements, .middle-img, .nav-elements a { width: 400px; }
+	.nav-elements { flex-direction: column; }
+	.nav-elements:first-child { border-bottom: 1px solid black; }
+	
+	.nav-elements a 
+	{ 
+		border-top: 1px solid black; 
+		text-align: center; 
+		padding: 10px 0px 10px 0px; 
+	}
+	
+	.main-content, .secondary-content { flex-direction: column; }
+	.about, .product, .vision { margin-top: 30px; }
+	.vision { padding-left: 0px; }
 }
