@@ -237,9 +237,16 @@ footer
 
 @media (max-width : 800px)
 {
-	nav { flex-direction: row-reverse; }
+	nav 
+	{ 
+		width: 75%;
+		flex-direction: row-reverse;
+		flex-flow: wrap;
+	}
+	
 	nav a { flex-direction: row; }	
 	.header-image { display: none; }
+	
 	.header-text 
 	{ 
 		width: 100%; 
