@@ -1,3 +1,248 @@
 /* Use your own code or past solution for Great Idea Web Page CSS here! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Set every element's box-sizing to border-box */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Bangers', cursive;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+/* Your code starts here! */
+
+body, nav .header-division, .section-division, .middle-img, .services-header-image, .features-header-image
+{
+	width: 876px; /* this is the width of the full middle image */
+}
+
+nav, header, footer, .header-text, .main-content, .secondary-content
+{
+	display: flex;
+}
+
+.nav-image, .header-image, .middle-image, .services-header-image, .features-header-image, .features1-image, .features2-image, 
+.features3-image, .features4-image, .features5-image, .features6-image
+{
+	color: #FFFFFF;
+}
+
+body
+{
+	height: auto;
+	margin-left: 75px;
+}
+
+nav
+{
+	margin-top: 20px;
+	justify-content: space-around;
+	align-items: center;
+}
+
+/*.nav-elements
+{
+	margin-top: 10px;
+	height: 50px;
+}*/
+
+nav a
+{
+	text-decoration: none;
+	color: #A7A7A7;
+	/*margin-right: 60px;*/
+	
+}
+
+/* Stretch Goal #4, setting all images as background images in CSS */
+.nav-image 
+{ 
+	/* Must set a width/height or the div will be 0px and won't show up. */
+	width: 183px;
+	height: 36px;	
+	background-image: url("../img/logo.png");
+	margin-left: 10px;
+	vertical-align: middle;
+}
+
+header
+{
+	justify-content: flex-end;
+	margin-top: 50px;
+	margin-bottom: 75px;
+}
+
+.services-header
+{
+	margin-bottom: 35px;
+}
+
+header h1 
+{ 
+	font-size: 72px; 
+	text-align: center; 
+}
+
+.services-header
+{
+	flex-direction: column;
+	justify-content: flex-start;
+}
+
+.services-header h1
+{
+	text-align: left;
+	font-size: 36px;
+}
+
+.header-text
+{
+	flex-direction: column;
+	align-items: center;
+	margin: 50px 50px 75px 0px;
+}
+
+.get-started
+{
+	border: 2px solid black;
+	padding: 10px 40px 10px 40px;
+}
+		
+/* Stretch Goal #4, setting all images as background images in CSS */
+.header-image 
+{ 
+	/* Must set a width/height or the div will be 0px and won't show up. */
+	width: 379px;
+	height: 379px;	
+	background-image: url("../img/header-img.png");
+	margin-right: 10px;
+}
+
+.services-header-image
+{
+	height: 200px;
+	background-image: url("../img/services-header.jpg");
+	margin-top: 25px;
+	margin-bottom: 25px;
+}
+
+.features-header-image
+{
+	height: 305px;
+	background-image: url("../img/features.png");
+	margin-top: 25px;
+	margin-bottom: 25px;
+}
+
+.features1-image, .features2-image, .features3-image, .features4-image, .features5-image, .features6-image
+{
+	background-repeat: no-repeat;
+	width: 100px;
+	height: 93px;
+}
+
+.features1-image { background-image: url("../img/features01.png"); }
+.features2-image { background-image: url("../img/features02.png"); }
+.features3-image { background-image: url("../img/features03.png"); }
+.features4-image { background-image: url("../img/features04.png"); }
+.features5-image { background-image: url("../img/features05.png"); }
+.features6-image { background-image: url("../img/features06.png"); }
+
+.header-division, .section-division
+{
+	height: 1px;
+	background-color: #000000;
+	border: 0 none;
+}
+
+.main-content, .secondary-content { margin: 35px 0px 35px 0px; }
+
+/* Stretch Goal #4, setting all images as background images in CSS */
+.middle-img
+{
+	/* Must set a width/height or the div will be 0px and won't show up. */
+	height: 182px;
+	background-image: url("../img/mid-page-accent.jpg");
+}
+
+.services { padding-right: 20px; }
+.vision { padding-left: 20px; }
+
+/*Creates a double-spaced line on lines 3 and 4 */
+address p:nth-child(3), address p:nth-child(4) { line-height: 2; }
+
+.address { margin-top: 25px; }
+
+footer
+{
+	justify-content: center;
+	margin: 25px 0px 25px 0px;
+}
 
 
+@media (max-width : 800px)
+{
+	nav { flex-direction: row-reverse; }
+	nav a { flex-direction: row; }	
+	.header-image { display: none; }
+	.header-text 
+	{ 
+		width: 100%; 
+		justify-content: center; 
+	}
+}
