@@ -66,46 +66,73 @@ h1, h2, h3, h4, h5 {
 
 /* Your code starts here! */
 
-body, nav .header-division, .section-division, .middle-img, .services-header-image, .features-header-image
+body, .nav-elements, .header-division, .section-division, .middle-img, .services-desc, 
+.services-facts, .services-header-image, .nav-elements a 
+{ width: 400px; }
+
+/*body, nav .header-division, .section-division, .middle-img, .services-header-image
 {
 	width: 876px; /* this is the width of the full middle image */
-}
+/*}*/
+
+
 
 nav, header, footer, .header-text, .main-content, .secondary-content, .nav-elements
 {
 	display: flex;
 }
 
-.nav-image, .header-image, .middle-image, .services-header-image, .features-header-image, .features1-image, .features2-image, 
-.features3-image, .features4-image, .features5-image, .features6-image
+.main-content, .secondary-content, .services-section, .services-facts, .nav-elements { flex-direction: column; }
+
+.nav-image, .header-image, .middle-image, .services-header-image, .services-info-img
 {
 	color: #FFFFFF;
+	background-repeat: no-repeat;
+	background-size: contain;
 }
 
 body
 {
+	margin: 0px 50px 0px 50px; 
 	height: auto;
 	margin: 0 auto;
 }
 
+	.nav-elements a 
+	{ 
+		border-top: 1px solid black; 
+		text-align: center; 
+		padding: 10px 0px 10px 0px; 
+	}
+
 nav
 {
 	margin-top: 20px;
-	justify-content: space-around;
+	/*justify-content: space-around;*/
+	flex-direction: column-reverse;
 	align-items: center;
 }
 
 .nav-elements
 {
-	width: 876px;
+	/*width: 876px;*/
+	margin-top: 25px;
 	justify-content: space-around;
 }
+
+.nav-elements:first-child { border-bottom: 1px solid black; }
 
 nav a
 {
 	text-decoration: none;
 	color: #A7A7A7;
-	
+}
+
+.nav-elements a
+{
+	border-top: 1px solid black; 
+	text-align: center; 
+	padding: 10px 0px 10px 0px; 
 }
 
 /* Stretch Goal #4, setting all images as background images in CSS */
@@ -122,8 +149,8 @@ nav a
 header
 {
 	justify-content: flex-end;
-	margin-top: 50px;
-	margin-bottom: 75px;
+	/*margin-top: 50px;*/
+	/*margin-bottom: 75px;*/
 }
 
 .header-text
@@ -159,6 +186,7 @@ header h1
 	background-image: url("../img/services-header.jpg");
 	margin-top: 25px;
 	margin-bottom: 25px;
+	display: none;
 }
 
 .get-started
@@ -174,6 +202,7 @@ header h1
 	height: 379px;	
 	background-image: url("../img/header-img.png");
 	margin-right: 10px;
+	display: none;
 }
 
 .header-division, .section-division
@@ -224,8 +253,11 @@ header h1
 	background-image: url("../img/mid-page-accent.jpg");
 }
 
-.services { padding-right: 20px; }
-.vision { padding-left: 20px; }
+/*.services { padding-right: 20px; }
+.vision { padding-left: 20px; }*/
+
+.about, .product, .vision { margin-top: 30px; }
+.vision { padding-left: 0px; }
 
 .services-facts
 {
@@ -262,28 +294,28 @@ footer
 	margin-top: 50px;
 }
 
-@media (max-width: 800px)
+.middle-img, .services-header-image, .services-info-img { background-size: contain; width: 400px; }
+
+@media (min-width: 500px)
 {
 	body, .nav-elements, .middle-img, .services-facts, .services-header-image { width: 700px; }
 	body { margin: 0px 50px 0px 50px; }	
 	nav { flex-direction: column-reverse; }	
 	.nav-elements { margin-top: 25px; }
-	.header-image { display: none; }
+	/*.header-image { display: none; }*/
 	
 	.header-text 
 	{ 
 		width: 100%; 
 		margin: 0px;
-	}	
-	
-	.middle-img, .services-header-image, .services-info-img 
-	{ 
-		background-size: contain; background-repeat: no-repeat; 
 	}
-}
-
-@media (max-width: 500px)
-{
+	
+	/*.middle-img, .services-header-image, .services-info-img { background-size: contain; }
+	body, .nav-elements, .middle-img, .services-desc, .services-facts, .services-header-image, .nav-elements a { width: 400px; }
+	.nav-elements { flex-direction: column; }
+	.nav-elements:first-child { border-bottom: 1px solid black; }
+	
+	/*.middle-img, .services-header-image, .services-info-img { background-size: contain; }
 	body, .nav-elements, .middle-img, .services-desc, .services-facts, .services-header-image, .nav-elements a { width: 400px; }
 	.nav-elements { flex-direction: column; }
 	.nav-elements:first-child { border-bottom: 1px solid black; }
@@ -297,5 +329,24 @@ footer
 	
 	.main-content, .secondary-content, .services-section, .services-facts { flex-direction: column; }
 	.about, .product, .vision { margin-top: 30px; }
-	.vision { padding-left: 0px; }
+	.vision { padding-left: 0px; }*/
 }
+
+/*@media (max-width: 800px)
+{
+	body, .nav-elements, .middle-img, .services-facts, .services-header-image { width: 700px; }
+	body { margin: 0px 50px 0px 50px; }	
+	nav { flex-direction: column-reverse; }	
+	.nav-elements { margin-top: 25px; }
+	.header-image { display: none; }
+	
+	.header-text 
+	{ 
+		width: 100%; 
+		margin: 0px;
+	}	
+	
+	.middle-img, .services-header-image, .services-info-img { background-size: contain; }
+}
+
+
