@@ -99,15 +99,12 @@ nav
 {
 	width: 876px;
 	justify-content: space-around;
-	/*margin-top: 10px;
-	height: 50px;*/
 }
 
 nav a
 {
 	text-decoration: none;
 	color: #A7A7A7;
-	/*margin-right: 60px;*/
 	
 }
 
@@ -129,8 +126,17 @@ header
 	margin-bottom: 75px;
 }
 
+.header-text
+{
+	flex-direction: column;
+	align-items: center;
+	margin: 50px 50px 75px 0px;
+}
+
 .services-header
 {
+	flex-direction: column;
+	justify-content: flex-start;
 	margin-bottom: 35px;
 }
 
@@ -140,23 +146,19 @@ header h1
 	text-align: center; 
 }
 
-.services-header
-{
-	flex-direction: column;
-	justify-content: flex-start;
-}
-
 .services-header h1
 {
 	text-align: left;
 	font-size: 36px;
 }
 
-.header-text
+.services-header-image
 {
-	flex-direction: column;
-	align-items: center;
-	margin: 50px 50px 75px 0px;
+	width: 876px;
+	height: 200px;
+	background-image: url("../img/services-header.jpg");
+	margin-top: 25px;
+	margin-bottom: 25px;
 }
 
 .get-started
@@ -164,8 +166,7 @@ header h1
 	border: 2px solid black;
 	padding: 10px 40px 10px 40px;
 }
-		
-/* Stretch Goal #4, setting all images as background images in CSS */
+
 .header-image 
 { 
 	/* Must set a width/height or the div will be 0px and won't show up. */
@@ -174,36 +175,6 @@ header h1
 	background-image: url("../img/header-img.png");
 	margin-right: 10px;
 }
-
-.services-header-image
-{
-	height: 200px;
-	background-image: url("../img/services-header.jpg");
-	margin-top: 25px;
-	margin-bottom: 25px;
-}
-
-.features-header-image
-{
-	height: 305px;
-	background-image: url("../img/features.png");
-	margin-top: 25px;
-	margin-bottom: 25px;
-}
-
-.features1-image, .features2-image, .features3-image, .features4-image, .features5-image, .features6-image
-{
-	background-repeat: no-repeat;
-	width: 100px;
-	height: 93px;
-}
-
-.features1-image { background-image: url("../img/features01.png"); }
-.features2-image { background-image: url("../img/features02.png"); }
-.features3-image { background-image: url("../img/features03.png"); }
-.features4-image { background-image: url("../img/features04.png"); }
-.features5-image { background-image: url("../img/features05.png"); }
-.features6-image { background-image: url("../img/features06.png"); }
 
 .header-division, .section-division
 {
@@ -214,7 +185,37 @@ header h1
 
 .main-content, .secondary-content { margin: 35px 0px 35px 0px; }
 
-/* Stretch Goal #4, setting all images as background images in CSS */
+.services-section
+{
+	display: flex;
+	flex-flow: wrap;
+	justify-content: space-between;
+	margin: 10px 0px 35px 0px;
+}
+
+.services-desc
+{
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	background-color: #F4F4F4;
+	width: 48%;
+	margin-top: 35px;
+	padding: 20px 20px 20px 20px;
+	border: 2px solid black;
+}
+
+.learn-more
+{
+	border: 1px solid black;
+	border-radius: 5px;
+	background-color: #FEFEFE;
+	padding: 10px 25px 10px 25px;
+	font-size: 13px;
+	font-weight: bold;
+	margin-top: 20px;
+}
+
 .middle-img
 {
 	/* Must set a width/height or the div will be 0px and won't show up. */
@@ -225,6 +226,25 @@ header h1
 
 .services { padding-right: 20px; }
 .vision { padding-left: 20px; }
+
+.services-facts
+{
+	display: flex;
+	margin-top: 35px;
+}
+
+.r-column
+{
+	padding: 20px 45px 20px 0px;
+}
+
+.r-column ul
+{
+	margin-top: 20px;
+	list-style-position: inside;
+	list-style-type: square;
+	line-height: 2;
+}
 
 /*Creates a double-spaced line on lines 3 and 4 */
 address p:nth-child(3), address p:nth-child(4) { line-height: 2; }
@@ -237,10 +257,14 @@ footer
 	margin: 25px 0px 25px 0px;
 }
 
+.services-footer
+{
+	margin-top: 50px;
+}
 
 @media (max-width: 800px)
 {
-	body, .nav-elements, .middle-img { width: 700px; }
+	body, .nav-elements, .middle-img, .services-facts, .services-header-image { width: 700px; }
 	body { margin: 0px 50px 0px 50px; }	
 	nav { flex-direction: column-reverse; }	
 	.nav-elements { margin-top: 25px; }
@@ -252,12 +276,15 @@ footer
 		margin: 0px;
 	}	
 	
-	.middle-img { background-size: contain; }
+	.middle-img, .services-header-image, .services-info-img 
+	{ 
+		background-size: contain; background-repeat: no-repeat; 
+	}
 }
 
 @media (max-width: 500px)
 {
-	body, .nav-elements, .middle-img, .nav-elements a { width: 400px; }
+	body, .nav-elements, .middle-img, .services-desc, .services-facts, .services-header-image, .nav-elements a { width: 400px; }
 	.nav-elements { flex-direction: column; }
 	.nav-elements:first-child { border-bottom: 1px solid black; }
 	
@@ -268,7 +295,7 @@ footer
 		padding: 10px 0px 10px 0px; 
 	}
 	
-	.main-content, .secondary-content { flex-direction: column; }
+	.main-content, .secondary-content, .services-section, .services-facts { flex-direction: column; }
 	.about, .product, .vision { margin-top: 30px; }
 	.vision { padding-left: 0px; }
 }
